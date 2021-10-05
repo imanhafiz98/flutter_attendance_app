@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class LoginView extends StatefulWidget {
+class RegisterView extends StatefulWidget {
   @override
-  _LoginViewState createState() => _LoginViewState();
+  _RegisterViewState createState() => _RegisterViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _RegisterViewState extends State<RegisterView> {
   bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
@@ -30,26 +30,14 @@ class _LoginViewState extends State<LoginView> {
                     left: 30,
                     width: 80,
                     height: 200,
-                    child: TweenAnimationBuilder(
-                        duration: Duration(seconds: 2),
-                        tween: Tween<double>(begin: 0, end: 55),
-                        builder: (_, double angle, __) {
-                          return Transform.rotate(
-                            angle: angle,
-                            child: Icon(
-                              Icons.perm_identity,
-                              color: Colors.cyan,
-                              size: 30.0,
-                            ),
-                          );
-                        }),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     image: DecorationImage(
-                    //       image: AssetImage('assets/lamp_1.jpg'),
-                    //     ),
-                    //   ),
-                    // ),
+                    child: IconButton(
+                      icon: Icon(
+                        Icons.perm_identity,
+                        color: Colors.cyan,
+                        size: 30.0,
+                      ),
+                      onPressed: () {},
+                    ),
                   ),
                   Positioned(
                     left: 140,
@@ -61,17 +49,8 @@ class _LoginViewState extends State<LoginView> {
                         color: Colors.yellow,
                         size: 30.0,
                       ),
-                      onPressed: () {
-                        
-                      },
+                      onPressed: () {},
                     ),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     image: DecorationImage(
-                    //       image: AssetImage('assets/lamp_2.jpg'),
-                    //     ),
-                    //   ),
-                    // ),
                   ),
                   Positioned(
                     right: 40,
@@ -84,18 +63,8 @@ class _LoginViewState extends State<LoginView> {
                         color: Colors.pink,
                         size: 30.0,
                       ),
-                      onPressed: () {
-                       
-                      },
+                      onPressed: () {},
                     ),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     image: DecorationImage(
-                    //       image: AssetImage('assets/clock.jpg'),
-                    //     ),
-
-                    //   ),
-                    // ),
                   ),
                   Positioned(
                     child: Container(
@@ -103,7 +72,7 @@ class _LoginViewState extends State<LoginView> {
                       child: Center(
                         // child: Text("Log in", style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),),
                         child: Text(
-                          "Log in",
+                          "Register",
                           style: TextStyle(
                               color: Colors.cyan,
                               fontSize: 25,
@@ -169,6 +138,28 @@ class _LoginViewState extends State<LoginView> {
                             ),
                           ),
                         ),
+                        Container(
+                          padding: EdgeInsets.all(8.0),
+                          child: TextField(
+                            obscureText: _isObscure,
+                            decoration: InputDecoration(
+                              suffixIcon: IconButton(
+                                  icon: Icon(
+                                    _isObscure
+                                        ? Icons.visibility
+                                        : Icons.visibility_off,
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      _isObscure = !_isObscure;
+                                    });
+                                  }),
+                              border: InputBorder.none,
+                              hintText: "Confirm Password",
+                              hintStyle: TextStyle(color: Colors.grey[400]),
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -186,7 +177,7 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     child: Center(
                       child: Text(
-                        "Login",
+                        "Register",
                         style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
@@ -196,14 +187,7 @@ class _LoginViewState extends State<LoginView> {
                   ),
                   SizedBox(height: 70),
                   Text(
-                    "Forget Password",
-                    style: TextStyle(
-                      color: Colors.cyan,
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    "Register here",
+                    "Already have an account? Sign in",
                     style: TextStyle(
                       color: Colors.cyan,
                     ),
