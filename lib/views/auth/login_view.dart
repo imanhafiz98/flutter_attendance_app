@@ -20,7 +20,7 @@ class _LoginViewState extends State<LoginView> {
               height: 300,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/white_1.jpg'),
+                  image: AssetImage('assets/images/white_1.jpg'),
                   fit: BoxFit.fill,
                 ),
               ),
