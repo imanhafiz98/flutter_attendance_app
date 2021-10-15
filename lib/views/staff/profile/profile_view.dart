@@ -14,7 +14,6 @@ class __ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
-      //backgroundColor: Colors.white,
       backgroundColor: Color.fromRGBO(247, 248, 252, 1),
       appBar: AppBar(
         actions: <Widget>[

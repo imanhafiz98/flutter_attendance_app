@@ -43,13 +43,6 @@ class _LoginViewState extends State<LoginView> {
                             ),
                           );
                         }),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     image: DecorationImage(
-                    //       image: AssetImage('assets/lamp_1.jpg'),
-                    //     ),
-                    //   ),
-                    // ),
                   ),
                   Positioned(
                     left: 140,
@@ -61,17 +54,8 @@ class _LoginViewState extends State<LoginView> {
                         color: Colors.yellow,
                         size: 30.0,
                       ),
-                      onPressed: () {
-                        
-                      },
+                      onPressed: () {},
                     ),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     image: DecorationImage(
-                    //       image: AssetImage('assets/lamp_2.jpg'),
-                    //     ),
-                    //   ),
-                    // ),
                   ),
                   Positioned(
                     right: 40,
@@ -84,24 +68,13 @@ class _LoginViewState extends State<LoginView> {
                         color: Colors.pink,
                         size: 30.0,
                       ),
-                      onPressed: () {
-                       
-                      },
+                      onPressed: () {},
                     ),
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //     image: DecorationImage(
-                    //       image: AssetImage('assets/clock.jpg'),
-                    //     ),
-
-                    //   ),
-                    // ),
                   ),
                   Positioned(
                     child: Container(
                       margin: EdgeInsets.only(top: 50),
                       child: Center(
-                        // child: Text("Log in", style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),),
                         child: Text(
                           "Log in",
                           style: TextStyle(
@@ -136,9 +109,7 @@ class _LoginViewState extends State<LoginView> {
                       children: <Widget>[
                         Container(
                           padding: EdgeInsets.all(8.0),
-                          decoration: BoxDecoration(
-                              //border: Border(bottom: BorderSide(color: Colors.grey[100]))
-                              ),
+                          decoration: BoxDecoration(),
                           child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,

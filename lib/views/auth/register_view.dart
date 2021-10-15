@@ -70,7 +70,6 @@ class _RegisterViewState extends State<RegisterView> {
                     child: Container(
                       margin: EdgeInsets.only(top: 50),
                       child: Center(
-                        // child: Text("Log in", style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),),
                         child: Text(
                           "Register",
                           style: TextStyle(
@@ -105,9 +104,7 @@ class _RegisterViewState extends State<RegisterView> {
                       children: <Widget>[
                         Container(
                           padding: EdgeInsets.all(8.0),
-                          decoration: BoxDecoration(
-                              //border: Border(bottom: BorderSide(color: Colors.grey[100]))
-                              ),
+                          decoration: BoxDecoration(),
                           child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
