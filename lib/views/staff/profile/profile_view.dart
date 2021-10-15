@@ -50,7 +50,6 @@ class __ProfilePageState extends State<ProfilePage> {
         backgroundColor: Color.fromRGBO(247, 248, 252, 1),
         elevation: 0.0,
       ),
-
       body: SingleChildScrollView(
         child: Container(
           child: Column(
@@ -92,8 +91,7 @@ class __ProfilePageState extends State<ProfilePage> {
                         children: <Widget>[
                           Container(
                             padding: EdgeInsets.all(8.0),
-                            decoration: BoxDecoration(
-                                ),
+                            decoration: BoxDecoration(),
                             child: TextField(
                               decoration: InputDecoration(
                                 prefixIcon: Icon(
@@ -111,8 +109,7 @@ class __ProfilePageState extends State<ProfilePage> {
                           ),
                           Container(
                             padding: EdgeInsets.all(8.0),
-                            decoration: BoxDecoration(
-                                ),
+                            decoration: BoxDecoration(),
                             child: TextField(
                               decoration: InputDecoration(
                                 prefixIcon: Icon(
@@ -148,7 +145,6 @@ class __ProfilePageState extends State<ProfilePage> {
                                         _isObscure = !_isObscure;
                                       });
                                     }),
-
                                 border: InputBorder.none,
                                 hintText: "**********",
                                 hintStyle: TextStyle(

@@ -11,15 +11,6 @@ class DashboardPage extends StatelessWidget {
     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
     return Scaffold(
       backgroundColor: Color.fromRGBO(247, 248, 252, 1),
-      //backgroundColor: Colors.white,
-      // appBar: AppBar(
-      //   leading: Icon(
-      //     Icons.drag_handle,
-      //     color: Colors.cyan,
-      //   ),
-      //   backgroundColor: Colors.white,
-      //   elevation: 0.0,
-      // ),
       body: ListView(
         children: [
           Container(
