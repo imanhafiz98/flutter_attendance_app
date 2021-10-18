@@ -4,6 +4,7 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_attendance_app/views/auth/register_view.dart';
+import 'package:flutter_attendance_app/views/auth/login_view.dart';
 import 'package:flutter_attendance_app/views/staff/dashboard_view.dart';
 
 class SplashScreenPage extends StatefulWidget {
@@ -78,6 +79,25 @@ class __SplashScreenPageState extends State<SplashScreenPage> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => RegisterView()));
+                  },
+                ),
+              ),
+            ),
+            SizedBox(height: 30),
+            Container(
+              height: 50,
+              child: Center(
+                child: IconButton(
+                  icon: Icon(
+                    Icons.lightbulb,
+                    color: Colors.yellow,
+                    size: 30.0,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => LoginView()));
                   },
                 ),
               ),
