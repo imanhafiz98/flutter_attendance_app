@@ -171,17 +171,18 @@ class DashboardPage extends StatelessWidget {
                             'Break',
                             style: TextStyle(
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
                               fontFamily: 'opensans',
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
                             ),
                           ),
                           subtitle: Text(
                             'Not break yet',
                             style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'opensans',
-                            ),
+                                color: Colors.white,
+                                fontFamily: 'opensans',
+                                fontWeight: FontWeight.bold,
+                                backgroundColor: Colors.red),
                           ),
                         ),
                         SizedBox(height: 100),
@@ -215,9 +216,9 @@ class DashboardPage extends StatelessWidget {
                             Icons.free_breakfast,
                             color: Colors.cyan,
                           ),
-                          title: const Text('Break'),
+                          title: const Text('End Break'),
                           subtitle: Text(
-                            'Not break yet',
+                            'Not end break yet',
                             style:
                                 TextStyle(color: Colors.black.withOpacity(0.6)),
                           ),
@@ -255,7 +256,7 @@ class DashboardPage extends StatelessWidget {
                             color: Colors.white,
                           ),
                           title: const Text(
-                            'Break',
+                            'Check Out',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -263,7 +264,7 @@ class DashboardPage extends StatelessWidget {
                             ),
                           ),
                           subtitle: Text(
-                            'Not break yet',
+                            'Not check out yet',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
