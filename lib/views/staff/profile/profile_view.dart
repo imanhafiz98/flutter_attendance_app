@@ -3,12 +3,15 @@ import 'package:flutter/services.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:page_transition/page_transition.dart';
 
-class ProfilePage extends StatefulWidget {
+import 'package:flutter_attendance_app/views/staff/profile/edit_profile_view.dart';
+import 'package:flutter_attendance_app/views/splash_screen.dart';
+
+class ProfileView extends StatefulWidget {
   @override
-  __ProfilePageState createState() => __ProfilePageState();
+  __ProfileViewState createState() => __ProfileViewState();
 }
 
-class __ProfilePageState extends State<ProfilePage> {
+class __ProfileViewState extends State<ProfileView> {
   bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
@@ -25,13 +28,13 @@ class __ProfilePageState extends State<ProfilePage> {
                 color: Colors.cyan,
               ),
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   PageTransition(
-                //       type: PageTransitionType.rightToLeft,
-                //       duration: Duration(milliseconds: 400),
-                //       child: EditProfilePage()),
-                // );
+                Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.rightToLeft,
+                      duration: Duration(milliseconds: 400),
+                      child: EditProfileView()),
+                );
               },
             ),
             decoration: BoxDecoration(
@@ -146,7 +149,7 @@ class __ProfilePageState extends State<ProfilePage> {
                                       });
                                     }),
                                 border: InputBorder.none,
-                                hintText: "**********",
+                                hintText: "12345678",
                                 hintStyle: TextStyle(
                                     color: Colors.black,
                                     fontFamily: 'opensans',
@@ -170,14 +173,22 @@ class __ProfilePageState extends State<ProfilePage> {
                         ),
                       ),
                       child: Center(
-                        child: Text(
-                          "Sign Out",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'opensans',
-                            fontSize: 18,
+                        child: FlatButton(
+                          child: Text(
+                            "Sign Out",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'opensans',
+                              fontSize: 18,
+                            ),
                           ),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SplashScreenPage()));
+                          },
                         ),
                       ),
                     ),
