@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/services.dart';
-
 import 'package:flutter_attendance_app/views/auth/register_view.dart';
 import 'package:flutter_attendance_app/views/auth/login_view.dart';
 import 'package:flutter_attendance_app/views/staff/dashboard_view.dart';
